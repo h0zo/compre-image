@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageCompress - Reduce Image Size Online</title>
+    <link rel="stylesheet" href="ai_studio_code.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🖼️ ImageCompress</h1>
+            <p>Reduce your image file size easily</p>
+        </div>
+
+        <div class="main-card">
+            <div class="upload-zone" id="uploadZone">
+                <div class="upload-icon">📷</div>
+                <div class="upload-text">Drop your image here or click to browse</div>
+                <div class="upload-subtext">Supports JPEG, PNG, WebP • Max 10MB</div>
+                <input type="file" class="file-input" id="fileInput" accept="image/*">
+            </div>
+
+            <div class="controls" id="controls">
+                <div class="control-group">
+                    <label for="targetSize">Target Size (KB)</label>
+                    <div class="input-container">
+                        <input type="number" id="targetSize" min="1" value="100" class="size-input">
+                        <span class="input-suffix">KB</span>
+                    </div>
+                </div>
+
+                <button class="compress-btn" id="compressBtn">Compress Image</button>
+            </div>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Compressing your image...</p>
+            </div>
+
+            <div class="result-section" id="resultSection">
+                <div class="savings" id="savings"></div>
+                
+                <div class="comparison">
+                    <div class="image-card">
+                        <h3>Original Image</h3>
+                        <img id="originalImage" alt="Original">
+                        <div class="image-info" id="originalInfo"></div>
+                    </div>
+                    <div class="image-card">
+                        <h3>Compressed Image</h3>
+                        <img id="compressedImage" alt="Compressed">
+                        <div class="image-info" id="compressedInfo"></div>
+                    </div>
+                </div>
+
+                <a class="download-btn" id="downloadBtn" download>Download Compressed Image</a>
+                <button class="reset-btn" id="resetBtn">Compress Another Image</button>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Size Control</h3>
+                <p>Specify your target file size in KB</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>100% Private</h3>
+                <p>Your images never leave your device</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Smart Compression</h3>
+                <p>Maintains quality while reducing size</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="ai_studio_code.js"></script>
+</body>
+</html>
